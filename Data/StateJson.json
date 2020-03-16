@@ -1,0 +1,150 @@
+[
+ {
+   "Id": 1,
+   "Name": "ABIA"
+ },
+ {
+   "Id": 2,
+   "Name": "ADAMAWA"
+ },
+ {
+   "Id": 3,
+   "Name": "AKWA IBOM"
+ },
+ {
+   "Id": 4,
+   "Name": "ANAMBRA"
+ },
+ {
+   "Id": 5,
+   "Name": "BAUCHI"
+ },
+ {
+   "Id": 6,
+   "Name": "BAYELSA"
+ },
+ {
+   "Id": 7,
+   "Name": "BENUE"
+ },
+ {
+   "Id": 8,
+   "Name": "BORNO"
+ },
+ {
+   "Id": 9,
+   "Name": "CROSS RIVER"
+ },
+ {
+   "Id": 10,
+   "Name": "DELTA"
+ },
+ {
+   "Id": 11,
+   "Name": "EBONYI"
+ },
+ {
+   "Id": 12,
+   "Name": "EDO"
+ },
+ {
+   "Id": 13,
+   "Name": "EKITI"
+ },
+ {
+   "Id": 14,
+   "Name": "ENUGU"
+ },
+ {
+   "Id": 15,
+   "Name": "FCT"
+ },
+ {
+   "Id": 16,
+   "Name": "GOMBE"
+ },
+ {
+   "Id": 17,
+   "Name": "IMO"
+ },
+ {
+   "Id": 18,
+   "Name": "JIGAWA"
+ },
+ {
+   "Id": 19,
+   "Name": "KADUNA"
+ },
+ {
+   "Id": 20,
+   "Name": "KANO"
+ },
+ {
+   "Id": 21,
+   "Name": "KATSINA"
+ },
+ {
+   "Id": 22,
+   "Name": "KEBBI"
+ },
+ {
+   "Id": 23,
+   "Name": "KOGI"
+ },
+ {
+   "Id": 24,
+   "Name": "KWARA"
+ },
+ {
+   "Id": 25,
+   "Name": "LAGOS"
+ },
+ {
+   "Id": 26,
+   "Name": "NASARAWA"
+ },
+ {
+   "Id": 27,
+   "Name": "NIGER"
+ },
+ {
+   "Id": 28,
+   "Name": "OGUN"
+ },
+ {
+   "Id": 29,
+   "Name": "ONDO"
+ },
+ {
+   "Id": 30,
+   "Name": "OSUN"
+ },
+ {
+   "Id": 31,
+   "Name": "OYO"
+ },
+ {
+   "Id": 32,
+   "Name": "PLATEAU"
+ },
+ {
+   "Id": 33,
+   "Name": "RIVERS"
+ },
+ {
+   "Id": 34,
+   "Name": "SOKOTO"
+ },
+ {
+   "Id": 35,
+   "Name": "TARABA"
+ },
+ {
+   "Id": 36,
+   "Name": "YOBE"
+ },
+ {
+   "Id": 37,
+   "Name": "ZAMFARA"
+ }
+]
