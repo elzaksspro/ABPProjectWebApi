@@ -60,7 +60,8 @@ namespace ProjectApi
             ConfigureServices(services);
         }
 
-        public void ConfigureProductionServices(IApplicationBuilder app,IServiceCollection services)
+//IApplicationBuilder app,
+        public void ConfigureProductionServices(IServiceCollection services)
         {
             services.AddDbContext<DataContext>(x => {
                 x.UseLazyLoadingProxies();
