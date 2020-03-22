@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Security.Claims;
 using System.IdentityModel.Tokens.Jwt;
-
+using Microsoft.AspNetCore.HttpOverrides;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -72,6 +72,14 @@ namespace ProjectApi
         }
         public void ConfigureServices(IServiceCollection services)
         {
+
+            // using System.Net;
+
+            services.Configure<ForwardedHeadersOptions>(options =>
+            {
+                options.KnownProxies.Add(IPAddress.Parse("34.70.37.6"));
+            });
+  
 
             services.AddSwaggerGen(c =>{
             c.SwaggerDoc("v1", new OpenApiInfo
@@ -246,6 +254,15 @@ namespace ProjectApi
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            
+            // using Microsoft.AspNetCore.HttpOverrides;
+
+            app.UseForwardedHeaders(new ForwardedHeadersOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+            });
+
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
