@@ -73,12 +73,7 @@ namespace ProjectApi
         public void ConfigureServices(IServiceCollection services)
         {
 
-            // using System.Net;
-
-            services.Configure<ForwardedHeadersOptions>(options =>
-            {
-                options.KnownProxies.Add(IPAddress.Parse("34.70.37.6"));
-            });
+            
   
 
             services.AddSwaggerGen(c =>{
@@ -192,6 +187,21 @@ namespace ProjectApi
                     opt.SerializerSettings.ReferenceLoopHandling =
                         Newtonsoft.Json.ReferenceLoopHandling.Ignore;
                 });
+             services.Configure<ForwardedHeadersOptions>(options =>
+             {
+          
+
+             options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+            // Only loopback proxies are allowed by default.
+            // Clear that restriction because forwarders are enabled by explicit 
+            // configuration.
+            options.KnownNetworks.Clear();
+            options.KnownProxies.Clear();
+            
+        });
+
+
+            
             services.AddCors();
             services.AddAutoMapper(typeof(IRepositoryBase<>).Assembly);
             services.AddAutoMapper(typeof(IUserService).Assembly);
@@ -257,10 +267,13 @@ namespace ProjectApi
             
             // using Microsoft.AspNetCore.HttpOverrides;
 
-            app.UseForwardedHeaders(new ForwardedHeadersOptions
-            {
-                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
-            });
+           // app.UseForwardedHeaders(new ForwardedHeadersOptions
+            //{
+              //  ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+            //});
+
+            app.UseForwardedHeaders();
+
 
 
             if (env.IsDevelopment())
